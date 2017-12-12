@@ -19,3 +19,6 @@ li.total {
   margin-top: 10px;
   font-weight: bold;
 }
+tr, td, th{
+  border: orange dotted 1px;
+}
