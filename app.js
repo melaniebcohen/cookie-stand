@@ -7,7 +7,7 @@ var firstAndPike = {
   minHourlyCustomers: 23,
   maxHourlyCustomers: 65,
   avgCookiePerCust: 6.3,
-  hoursOpen: ['6 AM','7 AM','8 AM','9 AM','10 AM','11 AM','12 PM','1 PM','2 PM','3 PM','4 PM','5 PM','6 PM','7 PM','8 PM'],
+  hoursOpen: ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'],
   hourlyCookieSales: [],
   hourlyCustomers: [],
   totalCookies: [],
@@ -54,7 +54,7 @@ var firstAndPike = {
       hourlyStats.push('<li>' + this.hoursOpen[k] + ':  ' + this.hourlyCookieSales[k] + ' cookies' + '</li>');
     }
 
-    hourlyStats.push('<li>' + 'Total: ' + this.totalCookies[0] + ' cookies' + '</li>');
+    hourlyStats.push('<li class="total">' + 'Total: ' + this.totalCookies[0] + ' cookies' + '</li>');
 
     var fullStats = hourlyStats.join('');
     storeHours.innerHTML = fullStats;
@@ -76,7 +76,7 @@ var seaTacAirport = {
   minHourlyCustomers: 3,
   maxHourlyCustomers: 24,
   avgCookiePerCust: 1.2,
-  hoursOpen: ['6 AM','7 AM','8 AM','9 AM','10 AM','11 AM','12 PM','1 PM','2 PM','3 PM','4 PM','5 PM','6 PM','7 PM','8 PM'],
+  hoursOpen: ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'],
   hourlyCookieSales: [],
   hourlyCustomers: [],
   totalCookies: [],
@@ -123,7 +123,7 @@ var seaTacAirport = {
       hourlyStats.push('<li>' + this.hoursOpen[k] + ':  ' + this.hourlyCookieSales[k] + ' cookies' + '</li>');
     }
 
-    hourlyStats.push('<li>' + 'Total: ' + this.totalCookies[0] + ' cookies' + '</li>');
+    hourlyStats.push('<li class="total">' + 'Total: ' + this.totalCookies[0] + ' cookies' + '</li>');
 
     var fullStats = hourlyStats.join('');
     storeHours.innerHTML = fullStats;
@@ -145,7 +145,7 @@ var seattleCenter = {
   minHourlyCustomers: 11,
   maxHourlyCustomers: 38,
   avgCookiePerCust: 3.7,
-  hoursOpen: ['6 AM','7 AM','8 AM','9 AM','10 AM','11 AM','12 PM','1 PM','2 PM','3 PM','4 PM','5 PM','6 PM','7 PM','8 PM'],
+  hoursOpen: ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'],
   hourlyCookieSales: [],
   hourlyCustomers: [],
   totalCookies: [],
@@ -192,7 +192,7 @@ var seattleCenter = {
       hourlyStats.push('<li>' + this.hoursOpen[k] + ':  ' + this.hourlyCookieSales[k] + ' cookies' + '</li>');
     }
 
-    hourlyStats.push('<li>' + 'Total: ' + this.totalCookies[0] + ' cookies' + '</li>');
+    hourlyStats.push('<li class="total">' + 'Total: ' + this.totalCookies[0] + ' cookies' + '</li>');
 
     var fullStats = hourlyStats.join('');
     storeHours.innerHTML = fullStats;
@@ -214,7 +214,7 @@ var capitolHill = {
   minHourlyCustomers: 20,
   maxHourlyCustomers: 38,
   avgCookiePerCust: 2.3,
-  hoursOpen: ['6 AM','7 AM','8 AM','9 AM','10 AM','11 AM','12 PM','1 PM','2 PM','3 PM','4 PM','5 PM','6 PM','7 PM','8 PM'],
+  hoursOpen: ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'],
   hourlyCookieSales: [],
   hourlyCustomers: [],
   totalCookies: [],
@@ -261,7 +261,7 @@ var capitolHill = {
       hourlyStats.push('<li>' + this.hoursOpen[k] + ':  ' + this.hourlyCookieSales[k] + ' cookies' + '</li>');
     }
 
-    hourlyStats.push('<li>' + 'Total: ' + this.totalCookies[0] + ' cookies' + '</li>');
+    hourlyStats.push('<li class="total">' + 'Total: ' + this.totalCookies[0] + ' cookies' + '</li>');
 
     var fullStats = hourlyStats.join('');
     storeHours.innerHTML = fullStats;
@@ -283,7 +283,7 @@ var alki = {
   minHourlyCustomers: 2,
   maxHourlyCustomers: 16,
   avgCookiePerCust: 4.6,
-  hoursOpen: ['6 AM','7 AM','8 AM','9 AM','10 AM','11 AM','12 PM','1 PM','2 PM','3 PM','4 PM','5 PM','6 PM','7 PM','8 PM'],
+  hoursOpen: ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'],
   hourlyCookieSales: [],
   hourlyCustomers: [],
   totalCookies: [],
@@ -330,7 +330,7 @@ var alki = {
       hourlyStats.push('<li>' + this.hoursOpen[k] + ':  ' + this.hourlyCookieSales[k] + ' cookies' + '</li>');
     }
 
-    hourlyStats.push('<li>' + 'Total: ' + this.totalCookies[0] + ' cookies' + '</li>');
+    hourlyStats.push('<li class="total">' + 'Total: ' + this.totalCookies[0] + ' cookies' + '</li>');
 
     var fullStats = hourlyStats.join('');
     storeHours.innerHTML = fullStats;
