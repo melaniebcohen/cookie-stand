@@ -1,5 +1,15 @@
+body {
+  font-family: avenir,sans-serif;
+  margin: 15px 0px 0px 15px;
+}
+h2 {
+  font-weight: bold;
+}
 ul {
     list-style-type: circle;
     margin: 20;
     padding: 0;
+}
+li {
+  margin-top: 5px;
 }
