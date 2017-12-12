@@ -54,7 +54,7 @@ var firstAndPike = {
       hourlyStats.push('<li>' + this.hoursOpen[k] + ':  ' + this.hourlyCookieSales[k] + ' cookies' + '</li>');
     }
 
-    hourlyStats.push('<li>' + 'Total: ' + this.totalCookies[0] + ' cookies' + '</li>');
+    hourlyStats.push('<li class="total">' + 'Total: ' + this.totalCookies[0] + ' cookies' + '</li>');
 
     var fullStats = hourlyStats.join('');
     storeHours.innerHTML = fullStats;
@@ -123,7 +123,7 @@ var seaTacAirport = {
       hourlyStats.push('<li>' + this.hoursOpen[k] + ':  ' + this.hourlyCookieSales[k] + ' cookies' + '</li>');
     }
 
-    hourlyStats.push('<li>' + 'Total: ' + this.totalCookies[0] + ' cookies' + '</li>');
+    hourlyStats.push('<li class="total">' + 'Total: ' + this.totalCookies[0] + ' cookies' + '</li>');
 
     var fullStats = hourlyStats.join('');
     storeHours.innerHTML = fullStats;
@@ -192,7 +192,7 @@ var seattleCenter = {
       hourlyStats.push('<li>' + this.hoursOpen[k] + ':  ' + this.hourlyCookieSales[k] + ' cookies' + '</li>');
     }
 
-    hourlyStats.push('<li>' + 'Total: ' + this.totalCookies[0] + ' cookies' + '</li>');
+    hourlyStats.push('<li class="total">' + 'Total: ' + this.totalCookies[0] + ' cookies' + '</li>');
 
     var fullStats = hourlyStats.join('');
     storeHours.innerHTML = fullStats;
@@ -261,7 +261,7 @@ var capitolHill = {
       hourlyStats.push('<li>' + this.hoursOpen[k] + ':  ' + this.hourlyCookieSales[k] + ' cookies' + '</li>');
     }
 
-    hourlyStats.push('<li>' + 'Total: ' + this.totalCookies[0] + ' cookies' + '</li>');
+    hourlyStats.push('<li class="total">' + 'Total: ' + this.totalCookies[0] + ' cookies' + '</li>');
 
     var fullStats = hourlyStats.join('');
     storeHours.innerHTML = fullStats;
@@ -330,7 +330,7 @@ var alki = {
       hourlyStats.push('<li>' + this.hoursOpen[k] + ':  ' + this.hourlyCookieSales[k] + ' cookies' + '</li>');
     }
 
-    hourlyStats.push('<li>' + 'Total: ' + this.totalCookies[0] + ' cookies' + '</li>');
+    hourlyStats.push('<li class="total">' + 'Total: ' + this.totalCookies[0] + ' cookies' + '</li>');
 
     var fullStats = hourlyStats.join('');
     storeHours.innerHTML = fullStats;
