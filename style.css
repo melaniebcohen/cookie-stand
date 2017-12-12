@@ -30,15 +30,20 @@ main {
   width: 960px;
   margin: 30px auto;
 }
-.information li {
-  float:left;
+li.information {
+  float: left;
   width: 300px;
-  margin: 30px 7px 30px 7px;
+  margin: 30px 7px 15px 7px;
   text-align: center;
   border: dashed 1px orange;
   font-family: 'Quattrocento',serif;
   font-weight: bold;
   font-size: 20px;
+}
+li.location {
+  clear: both;
+  margin: 0px 7px 10px 7px;
+  font-size: 15px;
 }
 h2 {
   font-weight: bold;
@@ -60,4 +65,9 @@ td:first-child {
 }
 tr, td, th{
   border: orange dotted 1px;
+}
+footer {
+  clear:both;
+  background-color: #112030;
+  height: 50px;
 }
