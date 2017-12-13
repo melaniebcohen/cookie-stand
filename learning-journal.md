@@ -1,7 +1,7 @@
 ##### Melanie Cohen
 # Learning Journal
 ------------------
-##### Day 6 | Monday, December 11
+#### Day 6 | Monday, December 11
 Covered the following in class:
 - Intro to Markdown
 - Intro to JS Objects
@@ -13,7 +13,7 @@ We started the infamous "Salmon Cookies" project in lab. At first I felt pretty 
 **Overcoming Challenges**
 I started working almost immediately once I got home and worked for several hours until I saw the cookies total, but I made it happen. There were many points during which I thought I could easily leave it as is for tomorrow, but I'm happy I stuck it out.
 
-##### Day 7 | Tuesday, December 12
+#### Day 7 | Tuesday, December 12
 Covered the following in class:
 - Constructor Functions
 - HTML Tables

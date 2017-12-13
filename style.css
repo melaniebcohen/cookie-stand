@@ -63,9 +63,6 @@ td {
 td:first-child {
     font-weight: bold;
 }
-tr, td, th{
-  border: orange dotted 1px;
-}
 footer {
   clear:both;
   background-color: #112030;
