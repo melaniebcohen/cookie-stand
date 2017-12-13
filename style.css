@@ -40,28 +40,53 @@ main {
 section img {
   margin-top: 10px;
 }
-div.store {
-  float: left;
-  border: purple 1px solid;
+section div.merchandise {
+  background-color: #ededed;
+  margin-top: 10px auto;
+  padding-top: 10px;
+  align-content: center;
+  text-align: center;
 }
-li.address {
-  margin: 0px 7px 10px 7px;
-  font-size: 11px;
+li.merch {
+  display: inline;
+  margin: 10px;
+}
+figure {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+li.merch img {
+  height: 150px;
+  border: 1px black solid;
+  margin-bottom: 5px;
+}
+div.storelocations {
+  align-content: center;
+  margin: 15px auto 0px auto;
+  text-align: center;
+}
+div.store {
+  display: inline-block;
+  margin: 10px 15px;
+  text-align: center;
+}
+li.locations {
+  clear: both;
+  font-size: 17px;
   text-align: center;
 }
 li.address {
-  margin: 0px 7px 2px 7px;
-  font-size: 11px;
+  margin: 10px 0px 2px 0px;
+  font-size: 13px;
   text-align: center;
 }
 li.address-city {
   margin: 0px 7px 10px 7px;
-  font-size: 11px;
+  font-size: 13px;
   text-align: center;
 }
 main section:last-child {
   clear: both;
-  height: 200px;
   background-color: #ededed;
   margin-top: 10px;
   display: inline-block;
@@ -69,19 +94,24 @@ main section:last-child {
 }
 li.information {
   width: 300px;
-  margin: 10px auto;
+  margin: 8px auto;
   text-align: center;
   font-family: 'Quattrocento',serif;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 23px;
 }
 div.column {
   float: left;
-  margin: 15px 15px;
-  border: purple 1px solid;
-  width: 435px;
+  margin: 10px 0px;
+  width: 350px;
 }
-li.locations, li.hours, li.contact {
+div.column:first-child {
+  padding-left: 130px;
+}
+div.column:last-child {
+  padding-right: 130px;
+}
+li.hours, li.contact {
   clear: both;
   margin: 0px 7px 5px 7px;
   font-size: 16px;
