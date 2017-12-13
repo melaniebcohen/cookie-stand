@@ -89,22 +89,23 @@ renderStore();
 var totalHourlyCookies = [];
 var totalOneHour = 0;
 
+// I know I need to loop this somehow... worked on this for hours but could only figure out the first array item
 function calcHourlyCookies() {
-  // for each hour in the day
-  // for(var i = 0; i < hours.length; i++) {
-  // iterate through 5 stores
   for(var i = 0; i < store.length; i++) {
-    //grab the same array value (j) for each
+    // for each store, iterate through all hours
+    console.log(store[i].storeName + ' ' + store[i].cookiesEachHour[0]);
     var oneHour = store[i].cookiesEachHour[0];
     totalOneHour += oneHour;
   }
   totalHourlyCookies.push(totalOneHour);
+  console.log(totalHourlyCookies);
 }
 calcHourlyCookies();
 
 function makeFooterRow() {
   var trEl = document.createElement('tr');
   var thEl = document.createElement('th');
+  thEl.textContent = 'Totals';
   trEl.appendChild(thEl);
 
   for(var i = 0; i < hours.length; i++) {
@@ -114,7 +115,6 @@ function makeFooterRow() {
   };
 
   thEl = document.createElement('th');
-  thEl.textContent = 'Total';
   trEl.appendChild(thEl);
 
   storeTable.appendChild(trEl);
