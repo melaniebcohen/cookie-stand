@@ -16,38 +16,6 @@ function Store(storeName, storeId, minCustsPerHour, maxCustsPerHour, avgCookiePe
   this.totalDailySales = 0;
   this.custsEachHour = [];
   this.cookiesEachHour = [];
-  this.calcCustsEachHour = function() {
-    for(var i = 0; i < hours.length; i++) {
-      this.custsEachHour.push(getRandomIntInclusive(this.minCustsPerHour, this.maxCustsPerHour));
-    }
-  };
-  this.calcCookiesEachHour = function() {
-    this.calcCustsEachHour();
-    for(var i = 0; i < hours.length; i++) {
-      var oneHour = Math.ceil(this.custsEachHour[i] * this.avgCookiePerCust);
-      this.cookiesEachHour.push(oneHour);
-      this.totalDailySales += oneHour;
-    };
-  };
-  this.render = function() {
-    this.calcCookiesEachHour();
-    var trEl = document.createElement('tr');
-    var tdEl = document.createElement('td');
-    tdEl.textContent = this.storeName;
-    trEl.appendChild(tdEl);
-
-    for(var i = 0; i < hours.length; i++) {
-      tdEl = document.createElement('td');
-      tdEl.textContent = this.cookiesEachHour[i];
-      trEl.appendChild(tdEl);
-    }
-
-    tdEl = document.createElement('td');
-    tdEl.textContent = this.totalDailySales;
-    trEl.appendChild(tdEl);
-
-    storeTable.appendChild(trEl);
-  };
   store.push(this);
 };
 
@@ -68,6 +36,40 @@ function calcHourlyCookies() {
   totalHourlyCookies.push(totalOneHour);
 }
 calcHourlyCookies();
+
+// FUNCTIONS
+Store.prototype.calcCustsEachHour = function() {
+  for(var i = 0; i < hours.length; i++) {
+    this.custsEachHour.push(getRandomIntInclusive(this.minCustsPerHour, this.maxCustsPerHour));
+  }
+};
+Store.prototype.calcCookiesEachHour = function() {
+  this.calcCustsEachHour();
+  for(var i = 0; i < hours.length; i++) {
+    var oneHour = Math.ceil(this.custsEachHour[i] * this.avgCookiePerCust);
+    this.cookiesEachHour.push(oneHour);
+    this.totalDailySales += oneHour;
+  };
+};
+Store.prototype.render = function() {
+  this.calcCookiesEachHour();
+  var trEl = document.createElement('tr');
+  var tdEl = document.createElement('td');
+  tdEl.textContent = this.storeName;
+  trEl.appendChild(tdEl);
+
+  for(var i = 0; i < hours.length; i++) {
+    tdEl = document.createElement('td');
+    tdEl.textContent = this.cookiesEachHour[i];
+    trEl.appendChild(tdEl);
+  }
+
+  tdEl = document.createElement('td');
+  tdEl.textContent = this.totalDailySales;
+  trEl.appendChild(tdEl);
+
+  storeTable.appendChild(trEl);
+};
 
 // CREATE & FILL TABLE
 var storeTable = document.getElementById('storeData');
