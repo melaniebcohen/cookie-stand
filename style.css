@@ -42,14 +42,14 @@ main section:nth-child(2) {
 }
 section div.merchandise {
   background-color: #fff;
-  margin-top: 10px auto;
+  margin-top: 0px auto;
   padding-top: 10px;
   align-content: center;
   text-align: center;
 }
 li.merch {
   display: inline;
-  margin: 10px;
+  margin: 5px;
 }
 figure {
   display: inline-block;
@@ -63,17 +63,18 @@ li.merch img {
 }
 div.storelocations {
   align-content: center;
-  margin: 15px auto 0px auto;
+  margin: 0px auto 0px auto;
   text-align: center;
 }
 div.store {
   display: inline-block;
-  margin: 10px 15px;
+  margin: 5px 15px;
   text-align: center;
 }
 li.hoursopen {
   padding: 0px 0px 15px 0px;
   font-style: italic;
+  font-family: georgia,serif;
 }
 li.locations {
   clear: both;
@@ -100,11 +101,14 @@ li.address-city {
 }
 li.information {
   width: 300px;
-  margin: 8px auto;
+  margin: 10px auto;
   text-align: center;
   font-family: 'Quattrocento',serif;
   font-weight: bold;
-  font-size: 23px;
+  font-size: 25px;
+}
+li.information:first-child {
+  padding-top: 10px;
 }
 div.column {
   float: left;
@@ -132,7 +136,7 @@ li.contact:last-child {
 }
 .family img {
   border: 1px solid #a5a5a5;
-  margin: 0px 0px 15px 0px;
+  margin: 0px 0px 20px 0px;
 }
 h2 {
   font-weight: bold;
@@ -162,20 +166,23 @@ tr:last-child {
 footer {
   clear:both;
   background-color: #112030;
-  height: 50px;
   font-size: 12px;
+}
+footer div {
+  margin-top: 10px auto;
+  padding-top: 10px;
+  align-content: center;
+  text-align: center;
 }
 .social {
   display: inline;
-  margin: 10px;
-}
-.social:first-child{
-  margin-right: 20px
+  margin-top: 5px;
 }
 footer p {
   color: #ffeed3;
   text-align: center;
-  padding-top: 15px;
+  margin: 15px 0px 10px;
+  padding-bottom: 15px;
   font-family: georgia,serif;
   display: block;
 }
