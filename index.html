@@ -1,13 +1,3 @@
-<!--
-USE:
-chinook.jpg
-cutter.jpg - done
-family.jpg
-fish.jpg - done
-frosted-cookie.jpg - done
-salmon.png
-shirt.png - done
--->
 <html>
   <head>
     <title>Salmon Cookies</title>
@@ -22,9 +12,9 @@ shirt.png - done
       <nav>
         <ul>
           <li>Salmon Cookies</li>
-          <li><a href="#">Merchandise</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">About Us</a></li>
+          <li><a href="#merch">Merchandise</a></li>
+          <li><a href="#stores">Locations</a></li>
+          <li><a href="#about">About Us</a></li>
         </ul>
       </nav>
     </div>
@@ -34,38 +24,7 @@ shirt.png - done
       <img class="hero-img" src="assets/pikeplacemarket.jpg">
       <!--image from https://www.thrillist.com/eat/seattle/pike-place-market-best-things-to-eat-drink-->
     </section>
-    <section>
-      <!-- ABOUT US GOES HERE -->
-      <img src="http://placehold.it/960x150">
-    </section>
-    <section>
-      <!-- UPCOMING EVENTS HERE -->
-      <img src="http://placehold.it/960x150">
-    </section>
-    <section>
-        <div class="merchandise">
-          <ul>
-            <li class="information">Merchandise</li>
-            <li class="merch">
-              <figure><a href="#"><img src="assets/frosted-cookie.jpg"></a>
-                <p>Cookies</p></figure>
-              </li>
-            <li class="merch">
-              <figure><a href="#"><img src="assets/shirt.jpg"></a>
-                <p>Shirts</p></figure>
-            </li>
-            <li class="merch">
-              <figure><a href="#"><img src="assets/cutter.jpg"></a>
-                <p>Cookie Cutters</p></figure>
-            </li>
-            <li class="merch">
-              <figure><a href="#"><img src="assets/fish.jpg"></a>
-                <p>Stickers</p></figure>
-              </li>
-          </ul>
-      </div>
-    </section>
-    <section>
+    <section id="stores">
         <div class="storelocations">
           <ul>
             <li class="information">Locations</li>
@@ -95,23 +54,41 @@ shirt.png - done
                   <li class="address">2742 Alki Ave SW</li>
                   <li class="address-city">Seattle, WA 98116</li>
                 </div>
+                <li class="hoursopen">Open 6 AM - 8 PM Monday - Sunday</li>
               </ul>
             </li>
           </ul>
       </div>
     </section>
-    <section>
+    <section id="merch">
+      <div class="merchandise">
+        <ul>
+          <li class="information">Merchandise</li>
+          <li class="merch">
+            <figure><a href="#"><img src="assets/frosted-cookie.jpg"></a>
+              <p>Cookies</p></figure>
+            </li>
+            <li class="merch">
+              <figure><a href="#"><img src="assets/shirt.jpg"></a>
+                <p>Shirts</p></figure>
+            </li>
+            <li class="merch">
+              <figure><a href="#"><img src="assets/cutter.jpg"></a>
+                <p>Cookie Cutters</p></figure>
+            </li>
+            <li class="merch">
+              <figure><a href="#"><img src="assets/fish.jpg"></a>
+                <p>Stickers</p></figure>
+            </li>
+          </ul>
+        </div>
+      </section>
+    <section id="about" class="hours">
       <div class="column">
         <ul>
-          <li class="information">Hours</li>
-            <ul>
-              <li class="hours">Open</li>
-              <li class="hours">6 AM - 8 PM</li>
-              <li class="hours">Tuesday - Sunday</li>
-              <li class="hours">&nbsp;</li>
-            </ul>
-          </li>
+          <li class="information">About Us</li>
         </ul>
+          <p class="family">We are a creepy af family that makes really weird cookies. Look how creepy we are. Honestly salmon cookies sound gross.</p>
       </div>
       <div class="column">
         <ul>
@@ -119,22 +96,27 @@ shirt.png - done
             <ul>
               <li class="contact">(206) 555-1234</li>
               <li class="contact"><a href="mailto:info@salmoncookies.com">info@salmoncookies.com</a></li>
-              <li class="contact">&nbsp;</li>
-              <li class="contact">Follow us on:</li>
-              <li class="contact">
-                <!--icons from https://www.iconfinder.com/iconsets/free-social-media-set -->
-                <a href="https://www.facebook.com"><img src="assets/facebook.png"></a>
-                <a href="https://www.instagram.com"><img src="assets/instagram.png"></a>
-                <a href="https://www.twitter.com"><img src="assets/twitter.png"></a>
-              </li>
             </ul>
           </li>
         </ul>
       </div>
     </section>
-  </main>
+    <section class="family">
+      <img src="assets/family.jpg">
+    </section>
   <footer>
-    <p>&copy; Salmon Cookies 2017</p>
+    <ul>
+    <!--icons from https://www.iconfinder.com/iconsets/free-social-media-set -->
+      <!--<li class="social">
+        <a href="https://www.facebook.com"><img src="assets/facebook.png"></a>
+      </li>
+      <li class="social">
+        <a href="https://www.instagram.com"><img src="assets/instagram.png"></a>
+      </li>
+      <li class="social">
+        <a href="https://www.twitter.com"><img src="assets/twitter.png"></a>
+      </li>-->
+    </ul>
   </footer>
   </body>
   <script src="app.js"></script>

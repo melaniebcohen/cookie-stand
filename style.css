@@ -34,14 +34,14 @@ main {
   width: 960px;
   margin: 10px auto;
 }
+main section:nth-child(2) {
+  background-color: #ededed;
+}
 .hero-img {
   opacity: .75;
 }
-section img {
-  margin-top: 10px;
-}
 section div.merchandise {
-  background-color: #ededed;
+  background-color: #fff;
   margin-top: 10px auto;
   padding-top: 10px;
   align-content: center;
@@ -59,6 +59,7 @@ li.merch img {
   height: 150px;
   border: 1px black solid;
   margin-bottom: 5px;
+  margin-top: 5px;
 }
 div.storelocations {
   align-content: center;
@@ -70,10 +71,15 @@ div.store {
   margin: 10px 15px;
   text-align: center;
 }
+li.hoursopen {
+  padding: 0px 0px 15px 0px;
+  font-style: italic;
+}
 li.locations {
   clear: both;
   font-size: 17px;
   text-align: center;
+  font-weight: bold;
 }
 li.address {
   margin: 10px 0px 2px 0px;
@@ -85,12 +91,12 @@ li.address-city {
   font-size: 13px;
   text-align: center;
 }
-main section:last-child {
+.hours {
   clear: both;
-  background-color: #ededed;
   margin-top: 10px;
   display: inline-block;
   align-content: center;
+  background-color: #ededed;
 }
 li.information {
   width: 300px;
@@ -102,20 +108,31 @@ li.information {
 }
 div.column {
   float: left;
-  margin: 10px 0px;
-  width: 350px;
+  margin: 10px 0px 0px 0px;
+  width: 330px;
 }
 div.column:first-child {
-  padding-left: 130px;
+  padding-left: 150px;
 }
 div.column:last-child {
-  padding-right: 130px;
+  padding-right: 150px;
 }
-li.hours, li.contact {
+li.contact {
   clear: both;
-  margin: 0px 7px 5px 7px;
   font-size: 16px;
   text-align: center;
+  margin: 0px 7px 10px 7px;
+}
+li.contact:last-child {
+  margin: 0px 7px 25px 7px;
+}
+.family {
+  text-align: center;
+  background-color: #ededed;
+}
+.family img {
+  border: 1px solid #a5a5a5;
+  margin: 0px 0px 15px 0px;
 }
 h2 {
   font-weight: bold;
@@ -148,9 +165,17 @@ footer {
   height: 50px;
   font-size: 12px;
 }
+.social {
+  display: inline;
+  margin: 10px;
+}
+.social:first-child{
+  margin-right: 20px
+}
 footer p {
   color: #ffeed3;
   text-align: center;
   padding-top: 15px;
   font-family: georgia,serif;
+  display: block;
 }
