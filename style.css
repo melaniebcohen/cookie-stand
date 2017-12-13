@@ -37,8 +37,11 @@ main {
 .hero-img {
   opacity: .75;
 }
+section img {
+  margin-top: 10px;
+}
 main section:last-child {
-  height: 200px;
+  height: 330px;
   background-color: #ededed;
   margin-top: 10px;
 }
@@ -49,7 +52,7 @@ li.information {
   text-align: center;
   font-family: 'Quattrocento',serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;
 }
 div.column {
   float: left;
@@ -57,7 +60,25 @@ div.column {
 }
 li.locations, li.hours, li.contact {
   margin: 0px 7px 10px 7px;
-  font-size: 15px;
+  font-size: 16px;
+  text-align: center;
+}
+li.locations {
+  margin-bottom: 2px;
+}
+li.address {
+  margin: 0px 7px 10px 7px;
+  font-size: 11px;
+  text-align: center;
+}
+li.address {
+  margin: 0px 7px 2px 7px;
+  font-size: 11px;
+  text-align: center;
+}
+li.address-city {
+  margin: 0px 7px 10px 7px;
+  font-size: 11px;
   text-align: center;
 }
 h2 {
