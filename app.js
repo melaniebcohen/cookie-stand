@@ -114,6 +114,15 @@ function makeFooterRow() {
   thEl = document.createElement('th');
   trEl.appendChild(thEl);
 
+  var total = 0;
+  for(var k = 0; k < store.length; k++) {
+    total += store[k].totalDailySales;
+    console.log(total);
+  }
+
+  thEl.textContent = total;
+  trEl.appendChild(thEl);
+
   storeTable.appendChild(trEl);
 };
 
