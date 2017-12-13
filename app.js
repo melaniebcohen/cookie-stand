@@ -89,10 +89,8 @@ renderStore();
 var totalHourlyCookies = [];
 var totalOneHour = 0;
 
-// I know I need to loop this somehow... worked on this for hours but could only figure out the first array item
 function calcHourlyCookies() {
   for(var i = 0; i < store.length; i++) {
-    // for each store, iterate through all hours
     console.log(store[i].storeName + ' ' + store[i].cookiesEachHour[0]);
     var oneHour = store[i].cookiesEachHour[0];
     totalOneHour += oneHour;
