@@ -27,20 +27,25 @@ header li:first-child {
   font-size: 30px;
 }
 header li a {
-  color: #FFDFA8;
+  color: #ff8787;
   text-decoration: none;
 }
 main {
   width: 960px;
-  margin: 30px auto;
+  margin: 10px auto;
 }
 .hero-img {
   opacity: .75;
 }
+main section:last-child {
+  height: 200px;
+  background-color: #ededed;
+  margin-top: 10px;
+}
 li.information {
   float: left;
   width: 300px;
-  margin: 20px 7px 15px 7px;
+  margin: 18px 7px 15px 7px;
   text-align: center;
   font-family: 'Quattrocento',serif;
   font-weight: bold;
@@ -79,10 +84,11 @@ footer {
   clear:both;
   background-color: #112030;
   height: 50px;
-  color: #ffeed3;
   font-size: 12px;
 }
 footer p {
+  color: #ffeed3;
   text-align: center;
   padding-top: 15px;
+  font-family: georgia,serif;
 }
