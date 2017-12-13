@@ -72,7 +72,7 @@ function makeHeaderRow() {
   };
 
   thEl = document.createElement('th');
-  thEl.textContent = 'Total';
+  thEl.textContent = 'Daily Location Total';
   trEl.appendChild(thEl);
 
   storeTable.appendChild(trEl);
@@ -86,6 +86,22 @@ function renderStore() {
 }
 renderStore();
 
+var totalHourlyCookies = [];
+var totalOneHour = 0;
+
+function calcHourlyCookies() {
+  // for each hour in the day
+  // for(var i = 0; i < hours.length; i++) {
+  // iterate through 5 stores
+  for(var i = 0; i < store.length; i++) {
+    //grab the same array value (j) for each
+    var oneHour = store[i].cookiesEachHour[0];
+    totalOneHour += oneHour;
+  }
+  totalHourlyCookies.push(totalOneHour);
+}
+calcHourlyCookies();
+
 function makeFooterRow() {
   var trEl = document.createElement('tr');
   var thEl = document.createElement('th');
@@ -93,7 +109,7 @@ function makeFooterRow() {
 
   for(var i = 0; i < hours.length; i++) {
     thEl = document.createElement('th');
-    thEl.textContent = 'N/A';
+    thEl.textContent = totalHourlyCookies[i];
     trEl.appendChild(thEl);
   };
 
