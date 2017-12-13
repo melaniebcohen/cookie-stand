@@ -26,6 +26,10 @@ header li:first-child {
   margin-top: 38px;
   font-size: 30px;
 }
+header li a {
+  color: #FFDFA8;
+  text-decoration: none;
+}
 main {
   width: 960px;
   margin: 30px auto;
@@ -33,17 +37,20 @@ main {
 li.information {
   float: left;
   width: 300px;
-  margin: 30px 7px 15px 7px;
+  margin: 20px 7px 15px 7px;
   text-align: center;
-  border: dashed 1px orange;
   font-family: 'Quattrocento',serif;
   font-weight: bold;
   font-size: 20px;
 }
-li.location {
-  clear: both;
+div.column {
+  float: left;
+  margin-bottom: 30px;
+}
+li.locations, li.hours, li.contact {
   margin: 0px 7px 10px 7px;
   font-size: 15px;
+  text-align: center;
 }
 h2 {
   font-weight: bold;
@@ -67,4 +74,10 @@ footer {
   clear:both;
   background-color: #112030;
   height: 50px;
+  color: #ffeed3;
+  font-size: 12px;
+}
+footer p {
+  text-align: center;
+  padding-top: 15px;
 }
