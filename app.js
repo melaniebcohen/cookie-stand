@@ -72,7 +72,7 @@ function makeHeaderRow() {
   };
 
   thEl = document.createElement('th');
-  thEl.textContent = 'Daily Location Total';
+  thEl.textContent = 'Daily Totals';
   trEl.appendChild(thEl);
 
   storeTable.appendChild(trEl);
@@ -109,14 +109,17 @@ function makeFooterRow() {
   trEl.appendChild(thEl);
 
   for(var i = 0; i < hours.length; i++) {
+    var sum = 0;
+    for(var j = 0; j < store.length; j++) {
+      sum += store[j].cookiesEachHour[i];
+    }
     thEl = document.createElement('th');
-    thEl.textContent = totalHourlyCookies[i];
+    thEl.textContent = sum;
     trEl.appendChild(thEl);
   };
-
   thEl = document.createElement('th');
   trEl.appendChild(thEl);
 
   storeTable.appendChild(trEl);
-}
+};
 makeFooterRow();
