@@ -3,6 +3,7 @@ body {
   background-color: #fff;
   position: relative;
 }
+/* HEADER */
 header {
   background-color: #254669;
   height: 100px;
@@ -31,16 +32,50 @@ header li:first-child {
   font-size: 30px;
   color: #FFDFA8;
 }
+/* MAIN */
 main {
   width: 960px;
   margin: 10px auto;
 }
-main section:nth-child(2) {
-  background-color: #ededed;
-}
 .hero-img {
   opacity: .75;
 }
+/* LOCATIONS */
+main section#stores {
+  background-color: #ededed;
+}
+div.storelocations {
+  align-content: center;
+  margin: 0px auto 0px auto;
+  text-align: center;
+}
+div.store {
+  display: inline-block;
+  margin: 5px 15px;
+  text-align: center;
+}
+li.locations {
+  clear: both;
+  font-size: 17px;
+  text-align: center;
+  font-weight: bold;
+}
+li.address {
+  margin: 10px 0px 2px 0px;
+  font-size: 13px;
+  text-align: center;
+}
+li.address-city {
+  margin: 0px 7px 10px 7px;
+  font-size: 13px;
+  text-align: center;
+}
+li.hoursopen {
+  padding: 0px 0px 15px 0px;
+  font-style: italic;
+  font-family: georgia,serif;
+}
+/* MERCH */
 section div.merchandise {
   background-color: #fff;
   margin-top: 0px auto;
@@ -62,44 +97,6 @@ li.merch img {
   margin-bottom: 5px;
   margin-top: 5px;
 }
-div.storelocations {
-  align-content: center;
-  margin: 0px auto 0px auto;
-  text-align: center;
-}
-div.store {
-  display: inline-block;
-  margin: 5px 15px;
-  text-align: center;
-}
-li.hoursopen {
-  padding: 0px 0px 15px 0px;
-  font-style: italic;
-  font-family: georgia,serif;
-}
-li.locations {
-  clear: both;
-  font-size: 17px;
-  text-align: center;
-  font-weight: bold;
-}
-li.address {
-  margin: 10px 0px 2px 0px;
-  font-size: 13px;
-  text-align: center;
-}
-li.address-city {
-  margin: 0px 7px 10px 7px;
-  font-size: 13px;
-  text-align: center;
-}
-.hours {
-  clear: both;
-  margin-top: 10px;
-  display: inline-block;
-  align-content: center;
-  background-color: #ededed;
-}
 li.information {
   width: 300px;
   margin: 10px auto;
@@ -110,6 +107,13 @@ li.information {
 }
 li.information:first-child {
   padding-top: 10px;
+}
+.about {
+  clear: both;
+  margin-top: 10px;
+  display: inline-block;
+  align-content: center;
+  background-color: #ededed;
 }
 div.column {
   float: left;
@@ -140,6 +144,36 @@ li.contact:last-child {
   border: 1px solid #a5a5a5;
   margin: 0px 0px 20px 0px;
 }
+
+/* FOOTER */
+footer {
+  position: absolute;
+  background-color: #112030;
+  left: 0;
+  width: 100%;
+  clear: both;
+}
+footer div {
+  margin-top: 10px auto;
+  padding-top: 10px;
+  align-content: center;
+  text-align: center;
+}
+.social {
+  display: inline;
+  margin-top: 15px;
+}
+footer p {
+  color: #ffeed3;
+  font-size: 12px;
+  text-align: center;
+  margin: 15px 0px 10px 0px;
+  padding-bottom: 10px;
+  font-family: georgia,serif;
+  display: block;
+}
+
+/* SPECIFIC SALES.HTML CSS RULES */
 h2 {
   font-weight: bold;
   font-size: 20px;
@@ -174,30 +208,4 @@ tr:last-child {
 #homelink {
   margin-top: 230px;
   margin-left: 10px;
-}
-footer {
-  position: absolute;
-  background-color: #112030;
-  left: 0;
-  width: 100%;
-  clear: both;
-}
-footer div {
-  margin-top: 10px auto;
-  padding-top: 10px;
-  align-content: center;
-  text-align: center;
-}
-.social {
-  display: inline;
-  margin-top: 15px;
-}
-footer p {
-  color: #ffeed3;
-  font-size: 12px;
-  text-align: center;
-  margin: 15px 0px 10px 0px;
-  padding-bottom: 10px;
-  font-family: georgia,serif;
-  display: block;
 }
