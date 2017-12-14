@@ -171,6 +171,10 @@ td:first-child, td:last-child {
 tr:last-child {
   border-top: black 1px solid;
 }
+#homelink {
+  margin-top: 230px;
+  margin-left: 10px;
+}
 footer {
   position: absolute;
   background-color: #112030;
