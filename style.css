@@ -1,6 +1,7 @@
 body {
   font-family: avenir,sans-serif;
   background-color: #fff;
+  position: relative;
 }
 header {
   background-color: #254669;
@@ -17,18 +18,18 @@ header img {
 }
 header li {
   display: inline-block;
-  margin: 43px 15px 0px 40px;
+  margin: 43px 15px 0px 30px;
   font-weight: bold;
-  color: #FFDFA8;
+}
+header li a, header li {
+  color: #ff8787;
+  text-decoration: none;
 }
 header li:first-child {
   font-family: 'Quattrocento',serif;
   margin-top: 38px;
   font-size: 30px;
-}
-header li a {
-  color: #ff8787;
-  text-decoration: none;
+  color: #FFDFA8;
 }
 main {
   width: 960px;
@@ -133,6 +134,7 @@ li.contact:last-child {
 .family {
   text-align: center;
   background-color: #ededed;
+  margin-bottom: 10px;
 }
 .family img {
   border: 1px solid #a5a5a5;
@@ -141,13 +143,16 @@ li.contact:last-child {
 h2 {
   font-weight: bold;
   font-size: 20px;
-  margin: 20px 0px 20px 15px;
+  margin: 30px 0px 20px 15px;
   font-family: Quattrocento;
   font-size: 25px;
   font-style: bold;
 }
 table {
-  margin: 0px 0px 0px 15px;
+  margin: 10px 0px 40px 15px;
+}
+table:last-child {
+  margin-bottom: 70px;
 }
 th {
   font-size: 14px;
@@ -167,9 +172,11 @@ tr:last-child {
   border-top: black 1px solid;
 }
 footer {
-  clear:both;
+  position: absolute;
   background-color: #112030;
-  font-size: 12px;
+  left: 0;
+  width: 100%;
+  clear: both;
 }
 footer div {
   margin-top: 10px auto;
@@ -179,13 +186,14 @@ footer div {
 }
 .social {
   display: inline;
-  margin-top: 5px;
+  margin-top: 15px;
 }
 footer p {
   color: #ffeed3;
+  font-size: 12px;
   text-align: center;
-  margin: 15px 0px 10px;
-  padding-bottom: 15px;
+  margin: 15px 0px 10px 0px;
+  padding-bottom: 10px;
   font-family: georgia,serif;
   display: block;
 }
