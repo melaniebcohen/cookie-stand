@@ -1,6 +1,7 @@
 body {
   font-family: avenir,sans-serif;
   background-color: #fff;
+  position: relative;
 }
 header {
   background-color: #254669;
@@ -17,55 +18,87 @@ header img {
 }
 header li {
   display: inline-block;
-  margin: 43px 15px 0px 40px;
+  margin: 43px 15px 0px 30px;
   font-weight: bold;
-  color: #FFDFA8;
+}
+header li a, header li {
+  color: #ff8787;
+  text-decoration: none;
 }
 header li:first-child {
   font-family: 'Quattrocento',serif;
   margin-top: 38px;
   font-size: 30px;
-}
-header li a {
-  color: #ff8787;
-  text-decoration: none;
+  color: #FFDFA8;
 }
 main {
   width: 960px;
   margin: 10px auto;
 }
+main section:nth-child(2) {
+  background-color: #ededed;
+}
 .hero-img {
   opacity: .75;
 }
-section img {
-  margin-top: 10px;
-}
-div.store {
-  float: left;
-  border: purple 1px solid;
-}
-li.address {
-  margin: 0px 7px 10px 7px;
-  font-size: 11px;
+section div.merchandise {
+  background-color: #fff;
+  margin-top: 0px auto;
+  padding-top: 10px;
+  align-content: center;
   text-align: center;
 }
+li.merch {
+  display: inline;
+  margin: 5px;
+}
+figure {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+li.merch img {
+  height: 150px;
+  border: 1px black solid;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+div.storelocations {
+  align-content: center;
+  margin: 0px auto 0px auto;
+  text-align: center;
+}
+div.store {
+  display: inline-block;
+  margin: 5px 15px;
+  text-align: center;
+}
+li.hoursopen {
+  padding: 0px 0px 15px 0px;
+  font-style: italic;
+  font-family: georgia,serif;
+}
+li.locations {
+  clear: both;
+  font-size: 17px;
+  text-align: center;
+  font-weight: bold;
+}
 li.address {
-  margin: 0px 7px 2px 7px;
-  font-size: 11px;
+  margin: 10px 0px 2px 0px;
+  font-size: 13px;
   text-align: center;
 }
 li.address-city {
   margin: 0px 7px 10px 7px;
-  font-size: 11px;
+  font-size: 13px;
   text-align: center;
 }
-main section:last-child {
+.hours {
   clear: both;
-  height: 200px;
-  background-color: #ededed;
   margin-top: 10px;
   display: inline-block;
   align-content: center;
+  background-color: #ededed;
 }
 li.information {
   width: 300px;
@@ -73,27 +106,53 @@ li.information {
   text-align: center;
   font-family: 'Quattrocento',serif;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 25px;
+}
+li.information:first-child {
+  padding-top: 10px;
 }
 div.column {
   float: left;
-  margin: 15px 15px;
-  border: purple 1px solid;
-  width: 435px;
+  margin: 10px 0px 0px 0px;
+  width: 330px;
 }
-li.locations, li.hours, li.contact {
+div.column:first-child {
+  padding-left: 150px;
+}
+div.column:last-child {
+  padding-right: 150px;
+}
+li.contact {
   clear: both;
-  margin: 0px 7px 5px 7px;
   font-size: 16px;
   text-align: center;
+  margin: 0px 7px 10px 7px;
+}
+li.contact:last-child {
+  margin: 0px 7px 25px 7px;
+}
+.family {
+  text-align: center;
+  background-color: #ededed;
+  margin-bottom: 10px;
+}
+.family img {
+  border: 1px solid #a5a5a5;
+  margin: 0px 0px 20px 0px;
 }
 h2 {
   font-weight: bold;
   font-size: 20px;
-  margin: 20px 0px 20px 15px;
+  margin: 30px 0px 20px 15px;
+  font-family: Quattrocento;
+  font-size: 25px;
+  font-style: bold;
 }
 table {
-  margin: 0px 0px 0px 15px;
+  margin: 10px 0px 40px 15px;
+}
+table:last-child {
+  margin-bottom: 70px;
 }
 th {
   font-size: 14px;
@@ -113,14 +172,28 @@ tr:last-child {
   border-top: black 1px solid;
 }
 footer {
-  clear:both;
+  position: absolute;
   background-color: #112030;
-  height: 50px;
-  font-size: 12px;
+  left: 0;
+  width: 100%;
+  clear: both;
+}
+footer div {
+  margin-top: 10px auto;
+  padding-top: 10px;
+  align-content: center;
+  text-align: center;
+}
+.social {
+  display: inline;
+  margin-top: 15px;
 }
 footer p {
   color: #ffeed3;
+  font-size: 12px;
   text-align: center;
-  padding-top: 15px;
+  margin: 15px 0px 10px 0px;
+  padding-bottom: 10px;
   font-family: georgia,serif;
+  display: block;
 }
