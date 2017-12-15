@@ -177,16 +177,31 @@ footer p {
 h2 {
   font-weight: bold;
   font-size: 20px;
-  margin: 30px 0px 20px 15px;
+  margin: 30px 0px 20px 10px;
   font-family: Quattrocento;
   font-size: 25px;
   font-style: bold;
 }
-table {
-  margin: 10px 0px 40px 15px;
+input[type="text"], input[type="number"], button {
+  display: block;
+  width: 200px;
+  padding: 5px;
+  margin: 5px 0px 10px 10px;
 }
-table:last-child {
-  margin-bottom: 70px;
+label {
+  margin: 0px 0px 0px 10px;
+  font-size: 14px;
+}
+button {
+  border: none;
+  border-radius: 3px;
+  background-color: #FFDFA8;
+  font-family: Avenir;
+  font-weight: bold;
+  font-size: 14px
+}
+table {
+  margin: 10px 0px 40px 10px;
 }
 th {
   font-size: 14px;
@@ -206,6 +221,5 @@ tr:last-child {
   border-top: black 1px solid;
 }
 #homelink {
-  margin-top: 230px;
   margin-left: 10px;
 }
