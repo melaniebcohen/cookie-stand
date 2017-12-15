@@ -1,15 +1,9 @@
 'use strict';
 
-/* NOT WORKING:
-- Totals. How do I update the footer row upon click event??
-
-*/
-
-// GLOBAL VARIABLES AND CONSTRUCTOR FUNCTIONS
+// Global variables
 var storeTable = document.getElementById('store-data');
 var newStoreForm = document.getElementById('cookie-form');
 
-// variables for store totals
 var totalHourlyCookies = [];
 var totalOneHour = 0;
 
@@ -75,14 +69,14 @@ function Store(storeName, minCustsPerHour, maxCustsPerHour, avgCookiePerCust){
   };
 }
 
-// Randomizing Function
+// Randomizer
 function getRandomIntInclusive(min, max) { // from MDN
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// CREATE & FILL TABLE - HOURLY COOKIES
+// Create & fill table
 function makeHeaderRow(id) {
   var trEl = document.createElement('tr');
   var thEl = document.createElement('th');
@@ -136,7 +130,30 @@ function makeFooterRow() {
   storeTable.appendChild(trEl);
 };
 
-//for event - replace/recalculate footer row
+renderStore();
+makeFooterRow();
+
+// Capture new stores
+function newData(event) {
+  event.preventDefault();
+
+  var storeLocation = event.target.storeName.value;
+  var minCusts = event.target.minCustsPerHour.value;
+  var maxCusts = event.target.maxCustsPerHour.value;
+  var avgCookies = event.target.avgCookiePerCust.value;
+
+  var newStore = new Store(storeLocation, minCusts, maxCusts, avgCookies);
+  store.push(newStore);
+  var storeLength = store.length - 1;
+  console.log(storeLength);
+
+  store[storeLength].render();
+  console.log(store[storeLength]);
+
+  replaceFooterRow();
+  newStoreForm.reset();
+}
+// Replace & recalculate footer row
 function replaceFooterRow() {
   document.getElementById('store-data').deleteRow(-1); // w3schools again ftw
 
@@ -167,29 +184,5 @@ function replaceFooterRow() {
 
   storeTable.appendChild(trEl);
 };
-
-renderStore();
-makeFooterRow();
-
-// CAPTURE NEW STORES
-function newData(event) {
-  event.preventDefault();
-
-  var storeLocation = event.target.storeName.value;
-  var minCusts = event.target.minCustsPerHour.value;
-  var maxCusts = event.target.maxCustsPerHour.value;
-  var avgCookies = event.target.avgCookiePerCust.value;
-
-  var newStore = new Store(storeLocation, minCusts, maxCusts, avgCookies);
-  store.push(newStore);
-  var storeLength = store.length - 1;
-  console.log(storeLength);
-
-  store[storeLength].render();
-  console.log(store[storeLength]);
-
-  replaceFooterRow();
-  newStoreForm.reset();
-}
 
 newStoreForm.addEventListener('submit', newData);
