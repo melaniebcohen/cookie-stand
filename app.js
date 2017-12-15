@@ -40,7 +40,7 @@ function Store(storeName, minCustsPerHour, maxCustsPerHour, avgCookiePerCust){
   };
   this.calcCustsEachHour = function() {
     for(var i = 0; i < hours.length; i++) {
-      var random = getRandomInt(this.minCustsPerHour, this.maxCustsPerHour);
+      var random = getRandomIntInclusive(this.minCustsPerHour, this.maxCustsPerHour);
       this.custsEachHour.push(random);
     }
   };
@@ -76,10 +76,10 @@ function Store(storeName, minCustsPerHour, maxCustsPerHour, avgCookiePerCust){
 }
 
 // Randomizing Function
-function getRandomInt(min, max) { // from MDN
+function getRandomIntInclusive(min, max) { // from MDN
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 // CREATE & FILL TABLE - HOURLY COOKIES
@@ -138,6 +138,8 @@ function makeFooterRow() {
 
 //for event - replace/recalculate footer row
 function replaceFooterRow() {
+  document.getElementById('store-data').deleteRow(-1); // w3schools again ftw
+
   var trEl = document.createElement('tr');
   var thEl = document.createElement('th');
   thEl.textContent = 'Totals';
@@ -186,6 +188,7 @@ function newData(event) {
   store[storeLength].render();
   console.log(store[storeLength]);
 
+  replaceFooterRow();
   newStoreForm.reset();
 }
 
