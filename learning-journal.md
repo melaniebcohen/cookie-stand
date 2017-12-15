@@ -48,3 +48,15 @@ The form was fine. Getting the data into an object wasn't that bad. Getting that
 
 **Overcoming Challenges**
 I removed all of my prototype functions, which made things easier. I think I still need to better understand those. Google was the best resource with the table. Resource sites and forums helped me figure out how to insert new rows in a specific spot and redo the footer with new totals.
+
+#### Day 10 | Friday, December 15
+Covered the following in class:
+- Review
+- CSS Animations
+- Today's Assignment
+
+**Challenges**
+No big challenges today on the salmon cookies project, just some refinement. The chocolate pizza project presented some challenges with CSS, but also went pretty well.
+
+**Overcoming Challenges**
+It was great to work with David on the chocolate pizza project and made the CSS challenges easier to tackle. I took the header and footer and he worked on the main section of the site. The biggest struggle for me was understanding the GitHub process. I'm still a little rusty on it, but getting there.
