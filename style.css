@@ -3,6 +3,7 @@ body {
   background-color: #fff;
   position: relative;
 }
+/* HEADER */
 header {
   background-color: #254669;
   height: 100px;
@@ -31,16 +32,50 @@ header li:first-child {
   font-size: 30px;
   color: #FFDFA8;
 }
+/* MAIN */
 main {
   width: 960px;
   margin: 10px auto;
 }
-main section:nth-child(2) {
-  background-color: #ededed;
-}
 .hero-img {
   opacity: .75;
 }
+/* LOCATIONS */
+main section#stores {
+  background-color: #ededed;
+}
+div.storelocations {
+  align-content: center;
+  margin: 0px auto 0px auto;
+  text-align: center;
+}
+div.store {
+  display: inline-block;
+  margin: 5px 15px;
+  text-align: center;
+}
+li.locations {
+  clear: both;
+  font-size: 17px;
+  text-align: center;
+  font-weight: bold;
+}
+li.address {
+  margin: 10px 0px 2px 0px;
+  font-size: 13px;
+  text-align: center;
+}
+li.address-city {
+  margin: 0px 7px 10px 7px;
+  font-size: 13px;
+  text-align: center;
+}
+li.hoursopen {
+  padding: 0px 0px 15px 0px;
+  font-style: italic;
+  font-family: georgia,serif;
+}
+/* MERCH */
 section div.merchandise {
   background-color: #fff;
   margin-top: 0px auto;
@@ -62,44 +97,6 @@ li.merch img {
   margin-bottom: 5px;
   margin-top: 5px;
 }
-div.storelocations {
-  align-content: center;
-  margin: 0px auto 0px auto;
-  text-align: center;
-}
-div.store {
-  display: inline-block;
-  margin: 5px 15px;
-  text-align: center;
-}
-li.hoursopen {
-  padding: 0px 0px 15px 0px;
-  font-style: italic;
-  font-family: georgia,serif;
-}
-li.locations {
-  clear: both;
-  font-size: 17px;
-  text-align: center;
-  font-weight: bold;
-}
-li.address {
-  margin: 10px 0px 2px 0px;
-  font-size: 13px;
-  text-align: center;
-}
-li.address-city {
-  margin: 0px 7px 10px 7px;
-  font-size: 13px;
-  text-align: center;
-}
-.hours {
-  clear: both;
-  margin-top: 10px;
-  display: inline-block;
-  align-content: center;
-  background-color: #ededed;
-}
 li.information {
   width: 300px;
   margin: 10px auto;
@@ -110,6 +107,13 @@ li.information {
 }
 li.information:first-child {
   padding-top: 10px;
+}
+.about {
+  clear: both;
+  margin-top: 10px;
+  display: inline-block;
+  align-content: center;
+  background-color: #ededed;
 }
 div.column {
   float: left;
@@ -140,37 +144,8 @@ li.contact:last-child {
   border: 1px solid #a5a5a5;
   margin: 0px 0px 20px 0px;
 }
-h2 {
-  font-weight: bold;
-  font-size: 20px;
-  margin: 30px 0px 20px 15px;
-  font-family: Quattrocento;
-  font-size: 25px;
-  font-style: bold;
-}
-table {
-  margin: 10px 0px 40px 15px;
-}
-table:last-child {
-  margin-bottom: 70px;
-}
-th {
-  font-size: 14px;
-  font-weight: bold;
-  padding: 5px;
-  text-align: right;
-}
-td {
-  font-size: 13px;
-  padding: 3px;
-  text-align: right;
-}
-td:first-child, td:last-child {
-    font-weight: bold;
-}
-tr:last-child {
-  border-top: black 1px solid;
-}
+
+/* FOOTER */
 footer {
   position: absolute;
   background-color: #112030;
@@ -196,4 +171,55 @@ footer p {
   padding-bottom: 10px;
   font-family: georgia,serif;
   display: block;
+}
+
+/* SPECIFIC SALES.HTML CSS RULES */
+h2 {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 30px 0px 20px 10px;
+  font-family: Quattrocento;
+  font-size: 25px;
+  font-style: bold;
+}
+input[type="text"], input[type="number"], button {
+  display: block;
+  width: 200px;
+  padding: 5px;
+  margin: 5px 0px 10px 10px;
+}
+label {
+  margin: 0px 0px 0px 10px;
+  font-size: 14px;
+}
+button {
+  border: none;
+  border-radius: 3px;
+  background-color: #FFDFA8;
+  font-family: Avenir;
+  font-weight: bold;
+  font-size: 14px
+}
+table {
+  margin: 10px 0px 40px 10px;
+}
+th {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px;
+  text-align: right;
+}
+td {
+  font-size: 13px;
+  padding: 3px;
+  text-align: right;
+}
+td:first-child, td:last-child {
+    font-weight: bold;
+}
+tr:last-child {
+  border-top: black 1px solid;
+}
+#homelink {
+  margin-left: 10px;
 }

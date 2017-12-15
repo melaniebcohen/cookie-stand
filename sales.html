@@ -19,10 +19,29 @@
       </div>
     </header>
     <main>
+      <form id="cookie-form">
+        <h2>Add New Location</h2>
+        <fieldset>
+          <label for="storeName">Store Location (one word)</label>
+          <input type="text" name="storeName" placeholder="Enter location here" required>
+        </fieldset>
+        <fieldset>
+          <label for="minCustsPerHour">Minimum Customers per Hour</label>
+          <input type="number" name="minCustsPerHour" placeholder="Enter min. customers" required>
+        </fieldset>
+        <fieldset>
+          <label for="maxCustsPerHour">Maximum Customers per Hour</label>
+          <input type="number" name="maxCustsPerHour" placeholder="Enter max. customers" required>
+        </fieldset>
+        <fieldset>
+          <label for="avgCookiePerCust">Average Cookies per Hour</label>
+          <input type="number" name="avgCookiePerCust" placeholder="Enter avg. cookies per hour" required>
+        </fieldset>
+        <button type="submit" id="btn-submit">Add Store</button>
+      </form>
       <h2>Cookies Needed By Location</h2>
-      <table id="storeData"></table>
-      <h2>Staffing Needed By Location</h2>
-      <table id="storeStaffing"></table>
+      <table id="store-data"></table>
+      <p id="homelink"><a href="index.html">Go back to home page</a></p>
     </main>
     <footer>
       <div>
