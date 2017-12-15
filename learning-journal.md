@@ -12,7 +12,7 @@ We started the infamous "Salmon Cookies" project in lab. At first I felt pretty 
 
 **Overcoming Challenges**
 I started working almost immediately once I got home and worked for several hours until I saw the cookies total, but I made it happen. There were many points during which I thought I could easily leave it as is for tomorrow, but I'm happy I stuck it out.
-
+----
 #### Day 7 | Tuesday, December 12
 Covered the following in class:
 - Constructor Functions
@@ -23,8 +23,8 @@ Continuing the Salmon Cookies project by moving the values from list items to a 
 
 **Overcoming Challenges**
 I worked as long as I could on the totals, but I think I will try to speak with a TA tomorrow rather than continue to spin my wheels on it. At a certain point, it becomes counter-productive.
-
-#### Day 8 | Tuesday, December 12
+----
+#### Day 8 | Wednesday, December 13
 Covered the following in class:
 - Code Organization
 - Debugging
@@ -34,4 +34,17 @@ Covered the following in class:
 The totals challenge from yesterday continued, but I got help from Taylor and understand what I was doing wrong. I was close! I spent a lot of the day restructuring my index.html site and battling with CSS. CSS is definitely a challenge...
 
 **Overcoming Challenges**
-Well, I guess stubborn persistence helped with the CSS. It's definitely not organized on the backend, but it's at least looking how I want it to look. I was going to attempt the staffing stretch goal, but realized I was too tired and in over my head. So, I now have the table up with no data. ¯\_(ツ)_/¯
+Well, I guess stubborn persistence helped with the CSS. It's definitely not organized on the backend, but it's at least looking how I want it to look. I was going to attempt the staffing stretch goal, but realized I was too tired and in over my head. So, I now have the table up with no data. ¯\\_(ツ)_/¯
+----
+#### Day 9 | Thursday, December 14
+Covered the following in class:
+- Object Constructors
+- Methods
+- Chrome Dev Tools
+- Forms and Events
+
+**Challenges**
+The form was fine. Getting the data into an object wasn't that bad. Getting that data to run through all the necessary functions and appear on the table? Yeah. That was a challenge.
+
+**Overcoming Challenges**
+I removed all of my prototype functions, which made things easier. I think I still need to better understand those. Google was the best resource with the table. Resource sites and forums helped me figure out how to insert new rows in a specific spot and redo the footer with new totals. 
