@@ -207,7 +207,7 @@ button {
 }
 button:active {
   color: #fff;
-  background-color: #c6ae83
+  background-color: #c6ae83;
 }
 table {
   margin: 10px 0px 40px 10px;
@@ -226,8 +226,21 @@ td {
 td:first-child, td:last-child {
     font-weight: bold;
 }
+tr {
+  transition: 350ms all;
+}
+tr:hover {
+  background: #fff2dc;
+}
+tr:first-child:hover {
+  background-color: #fff;
+}
 tr:last-child {
   border-top: black 1px solid;
+}
+tr:last-child:hover {
+  border-top: black 1px solid;
+  background-color: #fff;
 }
 #homelink {
   margin-left: 10px;
