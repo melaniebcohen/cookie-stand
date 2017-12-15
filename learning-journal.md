@@ -47,4 +47,4 @@ Covered the following in class:
 The form was fine. Getting the data into an object wasn't that bad. Getting that data to run through all the necessary functions and appear on the table? Yeah. That was a challenge.
 
 **Overcoming Challenges**
-I removed all of my prototype functions, which made things easier. I think I still need to better understand those. Google was the best resource with the table. Resource sites and forums helped me figure out how to insert new rows in a specific spot and redo the footer with new totals. 
+I removed all of my prototype functions, which made things easier. I think I still need to better understand those. Google was the best resource with the table. Resource sites and forums helped me figure out how to insert new rows in a specific spot and redo the footer with new totals.
