@@ -1,8 +1,17 @@
 'use strict';
 
+/* NOT WORKING:
+- Totals. How do I update the footer row upon click event??
+
+*/
+
 // GLOBAL VARIABLES AND CONSTRUCTOR FUNCTIONS
 var storeTable = document.getElementById('store-data');
 var newStoreForm = document.getElementById('cookie-form');
+
+// variables for store totals
+var totalHourlyCookies = [];
+var totalOneHour = 0;
 
 var hours = ['6 AM','7 AM','8 AM','9 AM','10 AM','11 AM','12 PM','1 PM','2 PM','3 PM','4 PM','5 PM','6 PM','7 PM'];
 var store = [
@@ -13,10 +22,6 @@ var store = [
   new Store('Alki', 2, 16, 4.6),
 ];
 
-// variables for store totals
-var totalHourlyCookies = [];
-var totalOneHour = 0;
-
 // Store constructor
 function Store(storeName, minCustsPerHour, maxCustsPerHour, avgCookiePerCust){
   this.storeName = storeName;
@@ -26,52 +31,56 @@ function Store(storeName, minCustsPerHour, maxCustsPerHour, avgCookiePerCust){
   this.totalDailySales = 0;
   this.custsEachHour = [];
   this.cookiesEachHour = [];
-};
-
-// CACLULATE STORE TOTALS
-function getRandomIntInclusive(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min; // via MDN docs
-};
-// CALCULATE COOKIES BY LOCATION
-Store.prototype.calcHourlyCookies = function() {
-  for(var i = 0; i < hours.length; i++) {
-    totalOneHour += this.cookiesEachHour[i];
-  }
-  totalHourlyCookies.push(totalOneHour);
-};
-Store.prototype.calcCustsEachHour = function() {
-  this.calcHourlyCookies();
-  for(var i = 0; i < hours.length; i++) {
-    this.custsEachHour.push(getRandomIntInclusive(this.minCustsPerHour, this.maxCustsPerHour));
-  }
-};
-Store.prototype.calcCookiesEachHour = function() {
-  this.calcCustsEachHour();
-  for(var i = 0; i < hours.length; i++) {
-    var oneHour = Math.ceil(this.custsEachHour[i] * this.avgCookiePerCust);
-    this.cookiesEachHour.push(oneHour);
-    this.totalDailySales += oneHour;
+  this.calcHourlyCookies = function() {
+    for(var i = 0; i < store.length; i++) {
+      totalOneHour += store[i].cookiesEachHour[i];
+    }
+    totalHourlyCookies.push(totalOneHour);
+    console.log(totalHourlyCookies);
   };
-};
-Store.prototype.render = function() {
-  this.calcCookiesEachHour();
-  var trEl = document.createElement('tr');
-  var tdEl = document.createElement('td');
-  tdEl.textContent = this.storeName;
-  trEl.appendChild(tdEl);
-
-  for(var i = 0; i < hours.length; i++) {
-    tdEl = document.createElement('td');
-    tdEl.textContent = this.cookiesEachHour[i];
+  this.calcCustsEachHour = function() {
+    for(var i = 0; i < hours.length; i++) {
+      var random = getRandomInt(this.minCustsPerHour, this.maxCustsPerHour);
+      this.custsEachHour.push(random);
+    }
+  };
+  this.calcCookiesEachHour = function() {
+    this.calcCustsEachHour();
+    for(var i = 0; i < hours.length; i++) {
+      var oneHour = Math.ceil(this.custsEachHour[i] * this.avgCookiePerCust);
+      this.cookiesEachHour.push(oneHour);
+      console.log(oneHour);
+      this.totalDailySales += oneHour;
+    };
+  };
+  this.render = function() {
+    this.calcCookiesEachHour();
+    var trEl = document.createElement('tr');
+    var tdEl = document.createElement('td');
+    tdEl.textContent = this.storeName;
     trEl.appendChild(tdEl);
-  }
 
-  tdEl = document.createElement('td');
-  tdEl.textContent = this.totalDailySales;
-  trEl.appendChild(tdEl);
+    for(var i = 0; i < hours.length; i++) {
+      tdEl = document.createElement('td');
+      tdEl.textContent = this.cookiesEachHour[i];
+      trEl.appendChild(tdEl);
+    }
 
-  storeTable.appendChild(trEl);
-};
+    tdEl = document.createElement('td');
+    tdEl.textContent = this.totalDailySales;
+    trEl.appendChild(tdEl);
+
+    storeTable.insertBefore(trEl,storeTable.childNodes[(store.length)]);
+    // found childNodes method on w3schools - it works!
+  };
+}
+
+// Randomizing Function
+function getRandomInt(min, max) { // from MDN
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
 
 // CREATE & FILL TABLE - HOURLY COOKIES
 function makeHeaderRow(id) {
@@ -99,8 +108,6 @@ function renderStore() {
   }
 }
 function makeFooterRow() {
-  renderStore();
-
   var trEl = document.createElement('tr');
   var thEl = document.createElement('th');
   thEl.textContent = 'Totals';
@@ -128,6 +135,38 @@ function makeFooterRow() {
 
   storeTable.appendChild(trEl);
 };
+
+//for event - replace/recalculate footer row
+function replaceFooterRow() {
+  var trEl = document.createElement('tr');
+  var thEl = document.createElement('th');
+  thEl.textContent = 'Totals';
+  trEl.appendChild(thEl);
+
+  for(var i = 0; i < hours.length; i++) {
+    var sum = 0;
+    for(var j = 0; j < store.length; j++) {
+      sum += store[j].cookiesEachHour[i];
+    }
+    thEl = document.createElement('th');
+    thEl.textContent = sum;
+    trEl.appendChild(thEl);
+  };
+  thEl = document.createElement('th');
+  trEl.appendChild(thEl);
+
+  var total = 0;
+  for(var k = 0; k < store.length; k++) {
+    total += store[k].totalDailySales;
+  }
+
+  thEl.textContent = total;
+  trEl.appendChild(thEl);
+
+  storeTable.appendChild(trEl);
+};
+
+renderStore();
 makeFooterRow();
 
 // CAPTURE NEW STORES
@@ -142,20 +181,12 @@ function newData(event) {
   var newStore = new Store(storeLocation, minCusts, maxCusts, avgCookies);
   store.push(newStore);
   var storeLength = store.length - 1;
+  console.log(storeLength);
 
   store[storeLength].render();
-
   console.log(store[storeLength]);
 
   newStoreForm.reset();
 }
-
-
-
-
-
-
-
-
 
 newStoreForm.addEventListener('submit', newData);
